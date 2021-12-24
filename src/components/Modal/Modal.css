@@ -1,0 +1,144 @@
+
+  .modal-wrapper {
+    z-index: 10000000;
+    background: #fff;
+    width: 80%;
+    position: absolute;
+    max-width: 800px;
+    margin: 2rem auto;
+    transition: all .5s ease;
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+  }
+  
+  .modal-header {
+    background: #2c2c2c;
+    color: #e9e9e9;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .modal-header span {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal-content {
+    padding: 1rem 1rem;
+    
+    
+  }
+  
+  .modal-body {
+    margin-bottom: 1rem;
+    
+    
+  }
+  
+  .modal-body h4 {
+    font-size: 1.8rem;
+    color: #DD501D;
+  }
+  
+  .modal-body p {
+    font-size: 1rem;
+    background: #eee;
+    color: #333;
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+  }
+  .modal-footer{
+    
+    
+    bottom: 20px;
+    left: 260px;
+    display: flex;
+    justify-content: flex-end;
+
+    
+  }
+  .modal-footer button {
+    display: block;
+    font-size: 1rem;
+    margin: 20px 20px;
+    padding: 0.5rem 1.8rem;
+    background: #DD501D;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .back-drop {
+    background: rgba(63, 61, 61, 0.692);
+    height: 100%;
+    position: fixed;
+    top:0px;
+    transition: all 1.3s;
+    width: 100%;
+  }
+
+  .modal-wrapper form{
+    padding: 10px 30px 50px 30px;
+    height: 75%;
+  }
+  .modal-wrapper form .field{
+    
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+  }
+  .modal-wrapper form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  .modal-wrapper form .field input:focus,
+  .modal-wrapper form .field input:valid{
+  border-color: #4158d0;
+}
+.modal-wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.modal-wrapper form .field input:focus ~ label,
+.modal-wrapper form .field input:valid ~ label,
+.modal-wrapper form .field input:disabled ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.modal-wrapper form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transition: all 0.3s ease;
+}
+.modal-wrapper form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
