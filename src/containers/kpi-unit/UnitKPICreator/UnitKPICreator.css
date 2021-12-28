@@ -11,8 +11,8 @@
 }
 
 .toolbox {
-  padding: 50px;
   display: flex;
+  margin-left: 80px;
 }
 .toolbox > * {
   margin: 50px;
