@@ -1,0 +1,17 @@
+.unit__dashboard__container {
+  padding-top: 3rem;
+  margin: auto 10rem;
+}
+
+.search__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chart__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
