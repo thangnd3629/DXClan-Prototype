@@ -20,3 +20,16 @@
 .unit-kpi-container {
   padding: 50px;
 }
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: stretch;
+}
+.input-group label span {
+  color: #ff0000;
+}
+.modal-toolbox {
+  display: flex;
+  justify-content: flex-end;
+}

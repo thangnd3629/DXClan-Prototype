@@ -39,13 +39,6 @@
   color: #dd501d;
 }
 
-.modal-body p {
-  font-size: 1rem;
-  background: #eee;
-  color: #333;
-  padding: 1rem;
-  margin: 1rem 0 2rem 0;
-}
 .modal-footer {
   bottom: 20px;
   left: 260px;
