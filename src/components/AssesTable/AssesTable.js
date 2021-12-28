@@ -13,6 +13,7 @@ export class Table extends Component {
       edit_row: null,
     }
   }
+
   paginate = (pageNumber) => this.setState({ currentPage: pageNumber })
 
   componentDidMount() {
@@ -42,6 +43,21 @@ export class Table extends Component {
     return this.props.data.filter((_, idx) => {
       return matchingIndex.indexOf(idx) !== -1
     })
+  }
+
+  generateStatusColor = (text) => {
+    let className = "ui tag label"
+    if (text === "Đang thiết lập") {
+      className = "ui tag label"
+    }
+    if (text === "Chờ phê duyệt") {
+      className = "ui red tag label"
+    }
+    if (text === "Đã phê duyệt") {
+      className = "ui teal tag label"
+    }
+
+    return <a className={className}>{text}</a>
   }
 
   enabledEditField = (field) => {
@@ -134,7 +150,8 @@ export class Table extends Component {
                     return <th key={idx}>{elm}</th>
                   })
                 : null}
-              <th>Hành động</th>
+              <th>Phê duyệt</th>
+              <th>Đánh giá</th>
             </tr>
           </thead>
           <tbody>
@@ -170,33 +187,37 @@ export class Table extends Component {
                         ) {
                           return null
                         }
-                        if (!this.props.editable) {
-                          return <td key={td_idx}>{row_val}</td>
+                        if (!this.props.editable && td_idx === 4) {
+                          return (
+                            <td key={td_idx}>
+                              {this.generateStatusColor(row_val)}
+                            </td>
+                          )
                         }
 
-                        return (
-                          <td key={td_idx}>
-                            <InputField
-                              type="text"
-                              disabled={this.enabledEditField(columns[td_idx])}
-                              value={row_val}
-                              onChange={(_, value) => {
-                                row[Object.keys(row)[td_idx]] = value
-                                this.props.onEdit(currentRows)
-                              }}
-                            ></InputField>
-                          </td>
-                        )
+                        return <td key={td_idx}>{row_val}</td>
                       })}
 
                       <td>
-                        <button class="positive ui button">Chỉnh sửa</button>
+                        <button class="ui inverted violet button">
+                          Phê duyệt
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          className={
+                            row_values[4] !== "Đã phê duyệt"
+                              ? "ui inverted grey button disabled"
+                              : "ui inverted purple button"
+                          }
+                        >
+                          Đánh giá
+                        </button>
                       </td>
                     </tr>
                   )
                 })
               : null}
-            {padding_row}
           </tbody>
         </table>
         <Pagination
