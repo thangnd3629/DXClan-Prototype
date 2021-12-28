@@ -1,0 +1,10 @@
+.picker-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+}
+.picker-group > * {
+  margin: 30px;
+}

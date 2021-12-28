@@ -11,15 +11,15 @@ import {
 
 import "./App.css"
 
-import PersonalKPICreator from "./containers/kpi-member/PersonalKPICreator"
+import PersonalKPICreator from "./containers/kpi-member/PersonalKPICreator/PersonalKPICreator"
 
-import Dashboard from "./containers/kpi-member/PersonalDashboard"
-import UnitKPICreator from "./containers/kpi-unit/UnitKPICreator"
-import PersonalManager from "./containers/kpi-member/PersonalManager"
-import PersonalDashboard from "./containers/kpi-member/PersonalDashboard"
-import UnitManager from "./containers/kpi-unit/UnitManager"
-import UnitDashboard from "./containers/kpi-unit/UnitDashboard"
-import Assesment from "./containers/kpi-unit/Assesment"
+import Dashboard from "./containers/kpi-member/PersonalDashboard/PersonalDashboard"
+import UnitKPICreator from "./containers/kpi-unit/UnitKPICreator/UnitKPICreator"
+import PersonalManager from "./containers/kpi-member/PersonalManager/PersonalManager"
+import PersonalDashboard from "./containers/kpi-member/PersonalDashboard/PersonalDashboard"
+import UnitManager from "./containers/kpi-unit/UnitManager/UnitManager"
+import UnitDashboard from "./containers/kpi-unit/UnitDashboard/UnitDashboard"
+import Assesment from "./containers/kpi-unit/Assesment/Assesment"
 
 class App extends Component {
   render() {
