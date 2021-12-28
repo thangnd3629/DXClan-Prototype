@@ -1,31 +1,31 @@
-.header{
-    display: flex;
-    justify-content: flex-end;
-    
-    align-items: center;
-    padding: 10px 10%;
-    background-color: lightgray;
-    
+.header {
+  display: flex;
+  justify-content: flex-end;
+
+  align-items: center;
+  padding: 10px 10%;
+  background-color: lightgray;
 }
-.logo{
-    
-    margin-right: auto;
+.logo {
+  margin-right: auto;
 }
-.links{
-    color: black;
+.links {
+  color: black;
 }
 
-.header button{
-    padding: 9px 25px;
-    
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-left: auto;
-    
+.header button {
+  padding: 9px 25px;
 
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: auto;
 }
-.header button:hover{
-    background-color: rgba(51, 51, 51, 0.5);
+.header button:hover {
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.dropdown-wrapper {
+  width: 200px;
+  margin-right: 50px;
 }
