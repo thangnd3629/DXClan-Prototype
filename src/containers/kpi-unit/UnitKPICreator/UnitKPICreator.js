@@ -18,7 +18,7 @@ export default function UnitKPICreator() {
   const [startDate, setStartDate] = useState(new Date())
   const data = MOCK_DATA[0].data
   return (
-    <div>
+    <div className="unit-kpi-container">
       <div className="picker-group">
         <Dropdown
           placeholder="Chọn Phòng ban"
@@ -27,12 +27,33 @@ export default function UnitKPICreator() {
           selection
           options={departments}
         />
-        <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-        />
+        <div>
+          <label>Tháng</label>
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+          />
+        </div>
       </div>
 
+      <div className="toolbox">
+        <div class="ui animated button" tabindex="0">
+          <div class="visible content">Next</div>
+          <div class="hidden content">
+            <i class="right arrow icon"></i>
+          </div>
+        </div>
+        <div class="ui vertical animated button" tabindex="0">
+          <div class="hidden content">Shop</div>
+          <div class="visible content">
+            <i class="shop icon"></i>
+          </div>
+        </div>
+        <div class="ui animated fade button" tabindex="0">
+          <div class="visible content">Sign-up for a Pro account</div>
+          <div class="hidden content">$12.99 a month</div>
+        </div>
+      </div>
       <Table
         data={data}
         rowPerPage={5}

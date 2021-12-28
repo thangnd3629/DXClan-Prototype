@@ -4,7 +4,19 @@
   justify-content: space-around;
   align-items: center;
   padding: 50px;
+  width: 40%;
 }
 .picker-group > * {
   margin: 30px;
+}
+
+.toolbox {
+  padding: 50px;
+  display: flex;
+}
+.toolbox > * {
+  margin: 50px;
+}
+.unit-kpi-container {
+  padding: 50px;
 }
