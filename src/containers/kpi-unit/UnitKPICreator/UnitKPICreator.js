@@ -127,12 +127,12 @@ export default function UnitKPICreator() {
           </div>
           <div className="input-group">
             <label>
-              Trọng số{" "}
-              <span>
-                * {`Hiện tại :${getCurKpiTotalWeight()}  `}
-                {overWeightKpi}
-              </span>
+              Trọng số <span>* {`Hiện tại :${getCurKpiTotalWeight()}  `}</span>
             </label>
+            <label>
+              <span>{overWeightKpi}</span>
+            </label>
+
             <div class="ui input">
               <input
                 type="number"

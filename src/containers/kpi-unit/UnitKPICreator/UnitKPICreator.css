@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 50px;
+
   width: 40%;
 }
 .picker-group > * {

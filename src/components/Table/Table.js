@@ -85,41 +85,41 @@ export class Table extends Component {
           <input required onChange={this.queryHandler}></input>
           <label>Search</label>
         </div>
-        <div className="hiddenCB">
-          <div className="checkboxes">
-            {data[0]
-              ? columns.map((elm, idx) => {
-                  if (
-                    this.props.hidden_field &&
-                    this.props.hidden_field.includes(elm)
-                  ) {
-                    return null
-                  }
-                  return (
-                    <div>
-                      <input
-                        id={idx}
-                        key={idx}
-                        type="checkbox"
-                        checked={this.state.query_field.includes(elm)}
-                        onChange={(e) => {
-                          const checked = this.state.query_field.includes(elm)
-                          const query_field = { ...this.state }.query_field
-                          if (checked) {
-                            query_field.splice(query_field.indexOf(elm), 1)
-                          } else {
-                            query_field.push(elm)
-                          }
-                          this.setState({ query_field: query_field })
-                        }}
-                      />
-                      <label htmlFor={idx}>{elm}</label>
-                    </div>
-                  )
-                })
-              : null}
-          </div>
+
+        <div className="checkboxes">
+          {data[0]
+            ? columns.map((elm, idx) => {
+                if (
+                  this.props.hidden_field &&
+                  this.props.hidden_field.includes(elm)
+                ) {
+                  return null
+                }
+                return (
+                  <div>
+                    <input
+                      id={idx}
+                      key={idx}
+                      type="checkbox"
+                      checked={this.state.query_field.includes(elm)}
+                      onChange={(e) => {
+                        const checked = this.state.query_field.includes(elm)
+                        const query_field = { ...this.state }.query_field
+                        if (checked) {
+                          query_field.splice(query_field.indexOf(elm), 1)
+                        } else {
+                          query_field.push(elm)
+                        }
+                        this.setState({ query_field: query_field })
+                      }}
+                    />
+                    <label htmlFor={idx}>{elm}</label>
+                  </div>
+                )
+              })
+            : null}
         </div>
+
         <table>
           <thead>
             <tr>

@@ -1,30 +1,31 @@
-import React from 'react';
-import './Pagination.css'
-import {Link} from 'react-router-dom'
+import React from "react"
+import "./Pagination.css"
+import { Link } from "react-router-dom"
 const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
-  const pageNumbers = [];
+  const pageNumbers = []
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    pageNumbers.push(i);
+    pageNumbers.push(i)
   }
-  
 
   return (
-
-    <div className='pagination'>
+    <div className="pagination-custom">
       <ul>
-        {pageNumbers.map(number => (
-          <li key={number} className={number === currentPage ? 'pageNumber active' : 'pageNumber'}>
-            <Link onClick={() => paginate(number)} to='#'>
+        {pageNumbers.map((number) => (
+          <li
+            key={number}
+            className={
+              number === currentPage ? "pageNumber active" : "pageNumber"
+            }
+          >
+            <Link onClick={() => paginate(number)} to="#">
               {number}
             </Link>
           </li>
         ))}
       </ul>
     </div>
+  )
+}
 
-
-  );
-};
-
-export default Pagination;
+export default Pagination
