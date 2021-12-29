@@ -37,15 +37,17 @@ export default function UnitKPICreator() {
     setKpiData(data.length > 0 ? data[0].data : [])
   }, [startDate])
 
-  const onSubmit = () => {
-    //get current weight
-
+  const getCurKpiTotalWeight = () => {
     let weights = 0
     kpiData.forEach((elm) => {
       weights = parseInt(elm["Trọng số"]) + weights
     })
+    return weights
+  }
+  const onSubmit = () => {
+    //get current weight
 
-    if (weights + parseInt(kpiWeight) >= 100) {
+    if (getCurKpiTotalWeight() + parseInt(kpiWeight) >= 100) {
       setOverWeightKpi("Không thể thêm mục tiêu do đạt quá 100 tổng trọng số")
     } else {
       setOverWeightKpi("")
@@ -125,7 +127,11 @@ export default function UnitKPICreator() {
           </div>
           <div className="input-group">
             <label>
-              Trọng số <span>* {overWeightKpi}</span>
+              Trọng số{" "}
+              <span>
+                * {`Hiện tại :${getCurKpiTotalWeight()}  `}
+                {overWeightKpi}
+              </span>
             </label>
             <div class="ui input">
               <input
