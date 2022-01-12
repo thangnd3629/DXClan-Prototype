@@ -34,18 +34,14 @@ export const options = {
   },
   plugins: {
     legend: {
-      position: "top",
-    },
-    title: {
-      display: true,
-      text: "Chart.js Line Chart",
+      position: "bottom",
     },
   },
 };
 
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
 
-export const data = {
+export const chartData = {
   labels,
   datasets: [
     {
@@ -63,7 +59,9 @@ export const data = {
   ],
 };
 
-const LineChart = (props) => {
+const LineChart = ({ data }) => {
+  console.log("data: ", data);
+
   return <Line height={300} options={options} data={data} />;
 };
 

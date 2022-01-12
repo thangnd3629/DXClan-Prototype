@@ -11,7 +11,6 @@
     "@mui/material": "^5.2.8",
     "@syncfusion/ej2-react-calendars": "^19.4.42",
     "@mui/icons-material": "^5.2.5",
-
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",

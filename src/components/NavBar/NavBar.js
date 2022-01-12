@@ -28,7 +28,7 @@ export class NavBar extends Component {
 
         <Link to='/login'>
           <button className='links' to='/login'>
-            Log out
+            Đăng xuất
           </button>
         </Link>
       </header>

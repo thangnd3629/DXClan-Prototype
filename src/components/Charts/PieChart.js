@@ -5,7 +5,17 @@ import { Pie } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const data = {
+export const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: "bottom",
+    },
+  },
+};
+
+export const pieData = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   datasets: [
     {
@@ -32,8 +42,9 @@ export const data = {
   ],
 };
 
-const PieChart = (props) => {
-  return <Pie data={data} />;
+const PieChart = ({ data }) => {
+  console.log("pie data: ", data);
+  return <Pie data={data} options={options} height='300px' width='300px' />;
 };
 
 export default PieChart;
