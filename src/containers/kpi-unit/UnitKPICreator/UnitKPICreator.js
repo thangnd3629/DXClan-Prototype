@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Dropdown } from "semantic-ui-react"
-import MOCK_DATA from "../../../components/Table/MOCK.json"
+import MOCK_DATA from "../../../fake-data/kpi-target"
 import Table from "../../../components/Table/Table"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
@@ -8,6 +8,7 @@ import "./UnitKPICreator.css"
 import GeneralModal from "../../../components/GeneralModal/GeneralModal"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import InputField from "../../../components/InputField/InputField"
 const departments = [
   {
     key: 1,
@@ -193,6 +194,7 @@ export default function UnitKPICreator() {
           <div class="hidden content">Bạn có chắc không ?</div>
         </div>
       </div>
+
       {kpiData.length > 0 && (
         <Table
           data={kpiData}
