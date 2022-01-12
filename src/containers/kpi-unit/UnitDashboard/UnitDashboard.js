@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./UnitDashboard.css";
+import React, { useState } from "react"
+import "./UnitDashboard.css"
 
 export default function UnitDashboard() {
   const units = [
@@ -18,7 +18,7 @@ export default function UnitDashboard() {
     "UIUX_13",
     "UIUX_14",
     "UIUX_15",
-  ];
+  ]
 
   const charts = [
     {
@@ -41,71 +41,71 @@ export default function UnitDashboard() {
       img: "https://hocieltsdanang.edu.vn/wp-content/uploads/2021/06/Bai-mau-4-line-graph.png",
       contentId: "chart4",
     },
-  ];
+  ]
 
   const [visibleStatus, setVisibleStatus] = useState(
     Array(charts.length).fill(true)
-  );
+  )
 
   const toggleVisible = (index) => {
     setVisibleStatus(
       visibleStatus.map((status, curIdx) => {
         if (curIdx !== index) {
-          return status;
+          return status
         }
-        return !status;
+        return !status
       })
-    );
-  };
+    )
+  }
 
   return (
-    <div className='unit__dashboard__container'>
+    <div className="unit__dashboard__container">
       <h2>Dashboard KPI đơn vị</h2>
-      <div className='search__container mb-5'>
-        <div className='mr-5'>
-          <label for='unit'>Đơn vị</label>
-          <select name='unit'>
+      <div className="search__container mb-5">
+        <div className="mr-5">
+          <label for="unit">Đơn vị </label>
+          <select class="ui selection dropdown" name="unit">
             {units.map((unit) => (
               <option value={unit}>{unit}</option>
             ))}
           </select>
         </div>
-        <div className='mr-5'>
-          <label for='month'>Tháng</label>
-          <select name='units'>
+        <div className="mr-5">
+          <label for="month">Tháng </label>
+          <select className="ui selection dropdown" name="units">
             {units.map((unit) => (
               <option value={unit}>{unit}</option>
             ))}
           </select>
         </div>
-        <button className='btn btn-primary'>Phân tích</button>
+        <button className="ui inverted primary button">Phân tích</button>
       </div>
       {charts.map((chart, index) => (
-        <div className='chart mb-3'>
-          <div className='card card-header chart__header mb-3'>
-            <p className='m-0'>{chart.title}</p>
+        <div className="chart mb-3">
+          <div className="card card-header chart__header mb-3">
+            <p className="m-0">{chart.title}</p>
             <button
-              class='btn btn-primary'
-              data-toggle='collapse'
+              class="btn btn-primary"
+              data-toggle="collapse"
               data-target={`#${chart.contentId}`}
-              aria-expanded='true'
+              aria-expanded="true"
               onClick={() => toggleVisible(index)}
             >
               {visibleStatus[index] ? (
-                <i class='fas fa-chevron-down'></i>
+                <i class="fas fa-chevron-down"></i>
               ) : (
-                <i class='fas fa-chevron-right'></i>
+                <i class="fas fa-chevron-right"></i>
               )}
             </button>
           </div>
           <div
-            class='card card-body collapse multi-collapse show'
+            class="card card-body collapse multi-collapse show"
             id={chart.contentId}
           >
-            <img src={chart.img} alt='Kpi stat' width='100%' />
+            <img src={chart.img} alt="Kpi stat" width="100%" />
           </div>
         </div>
       ))}
     </div>
-  );
+  )
 }

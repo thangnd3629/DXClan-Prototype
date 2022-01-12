@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react"
 import { Dropdown } from "semantic-ui-react"
 import MOCK_DATA from "../../../fake-data/kpi-target"
 import Table from "../../../components/Table/Table"
-import DatePicker from "react-datepicker"
+
 import "react-datepicker/dist/react-datepicker.css"
 import "./UnitKPICreator.css"
 import GeneralModal from "../../../components/GeneralModal/GeneralModal"
 import { ToastContainer, toast } from "react-toastify"
+import TextField from "@mui/material/TextField"
+import AdapterDateFns from "@mui/lab/AdapterDateFns"
+import LocalizationProvider from "@mui/lab/LocalizationProvider"
+import DatePicker from "@mui/lab/DatePicker"
 import "react-toastify/dist/ReactToastify.css"
-import InputField from "../../../components/InputField/InputField"
+
 const departments = [
   {
     key: 1,
@@ -144,13 +148,9 @@ export default function UnitKPICreator() {
           </div>
         </div>
         <div className="modal-toolbox">
-          <button class="ui labeled icon button">
-            <i class="pause icon"></i>
-            Huỷ
-          </button>
-          <button class="ui right labeled icon button" onClick={onSubmit}>
-            <i class="right arrow icon"></i>
-            Khởi tạo
+          <button class="ui inverted red button">Hủy</button>
+          <button class="ui inverted green button" onClick={onSubmit}>
+            Thêm
           </button>
         </div>
       </GeneralModal>
@@ -164,35 +164,30 @@ export default function UnitKPICreator() {
           options={departments}
         />
         <div>
-          <label>Tháng</label>
-          <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-          />
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <DatePicker
+              label="Tháng"
+              value={startDate}
+              onChange={(newValue) => {
+                setStartDate(newValue)
+              }}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          </LocalizationProvider>
         </div>
       </div>
 
       <div className="toolbox">
-        <div
-          class="ui animated button"
-          tabindex="0"
+        <button
+          class="ui inverted primary button"
           onClick={() => {
             setShowModal(true)
           }}
         >
-          <div class="visible content">Thêm mục tiêu</div>
-          <div class="hidden content">
-            <i class="right arrow icon"></i>
-          </div>
-        </div>
-        <div class="ui vertical animated button" tabindex="0">
-          <div class="hidden content">Kích hoạt</div>
-          <div class="visible content">Kích hoạt</div>
-        </div>
-        <div class="ui animated fade button" tabindex="0">
-          <div class="visible content">Xóa KPI này</div>
-          <div class="hidden content">Bạn có chắc không ?</div>
-        </div>
+          Thêm mục tiêu
+        </button>
+
+        <button class="ui inverted green button">Kích Hoạt</button>
       </div>
 
       {kpiData.length > 0 && (

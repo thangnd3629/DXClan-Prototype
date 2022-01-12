@@ -24,7 +24,7 @@ export class Sidebar extends Component {
         <Link to="/kpi-personal/manager">
           <i className="fas fa-qrcode"></i>Quản lý KPI cá nhân
         </Link>
-        ,<div className="divider">KPI đơn vị</div>,
+        <div className="divider">KPI đơn vị</div>
         <Link to="/kpi-unit/dashboard">
           <i className="fas fa-qrcode"></i>Dashboard KPI đơn vị
         </Link>

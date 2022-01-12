@@ -1,9 +1,13 @@
 import React, { useState } from "react"
 import "./Assesment.css"
 import { Dropdown } from "semantic-ui-react"
-import DatePicker from "react-datepicker"
+
 import Table from "../../../components/AssesTable/AssesTable"
 import MOCK_DATA from "../../../fake-data/kpi-assesment"
+import TextField from "@mui/material/TextField"
+import AdapterDateFns from "@mui/lab/AdapterDateFns"
+import LocalizationProvider from "@mui/lab/LocalizationProvider"
+import DatePicker from "@mui/lab/DatePicker"
 const departments = [
   {
     key: 1,
@@ -27,11 +31,16 @@ export default function Assesment() {
           options={departments}
         />
         <div>
-          <label>Tháng</label>
-          <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-          />
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <DatePicker
+              label="Tháng"
+              value={startDate}
+              onChange={(newValue) => {
+                setStartDate(newValue)
+              }}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          </LocalizationProvider>
         </div>
       </div>
       <Table

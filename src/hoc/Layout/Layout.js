@@ -12,6 +12,7 @@ class Layout extends Component {
         <NavBar></NavBar>
 
         <Sidebar></Sidebar>
+
         {this.props.children}
         <Footer></Footer>
       </div>
