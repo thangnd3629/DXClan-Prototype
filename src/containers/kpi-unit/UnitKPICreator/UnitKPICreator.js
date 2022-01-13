@@ -83,6 +83,16 @@ export default function UnitKPICreator() {
   const onChangeKpiTarget = (e) => {
     setkpiTarget(e.target.value)
   }
+  const onChangeTarget = (index) => {
+    const data = kpiData[index]
+    console.log(data["Mục tiêu cha"])
+    setKpiBase(data["Mục tiêu cha"])
+    setKpiCriteria(data["Tiêu chí đánh giá"])
+    setKpiWeight(data["Trọng số"])
+    setkpiTarget(data["Tên mục tiêu"])
+
+    setShowModal(true)
+  }
   return (
     <div className="unit-kpi-container">
       <ToastContainer />
@@ -102,6 +112,7 @@ export default function UnitKPICreator() {
                 type="text"
                 placeholder="Search..."
                 onChange={onChangeKpiTarget}
+                value={kpiTarget}
               />
             </div>
           </div>
@@ -114,6 +125,7 @@ export default function UnitKPICreator() {
               <input
                 type="text"
                 placeholder="Search..."
+                value={kpiCriteria}
                 onChange={onChangeCriteria}
               />
             </div>
@@ -125,6 +137,7 @@ export default function UnitKPICreator() {
             <div class="ui input">
               <input
                 type="text"
+                value={kpiBase}
                 placeholder="Search..."
                 onChange={onChangeBaseKpi}
               />
@@ -143,12 +156,20 @@ export default function UnitKPICreator() {
                 type="number"
                 placeholder="Search..."
                 onChange={onChangeKpiWeight}
+                value={kpiWeight}
               />
             </div>
           </div>
         </div>
         <div className="modal-toolbox">
-          <button class="ui inverted red button">Hủy</button>
+          <button
+            class="ui inverted red button"
+            onClick={() => {
+              setShowModal(false)
+            }}
+          >
+            Hủy
+          </button>
           <button class="ui inverted green button" onClick={onSubmit}>
             Thêm
           </button>
@@ -197,6 +218,7 @@ export default function UnitKPICreator() {
           rowClick={() => {
             console.log("clicked")
           }}
+          onChangeTarget={onChangeTarget}
         />
       )}
     </div>

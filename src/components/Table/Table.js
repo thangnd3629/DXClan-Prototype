@@ -192,7 +192,12 @@ export class Table extends Component {
                       })}
 
                       <td>
-                        <button class="ui inverted green button">
+                        <button
+                          class="ui inverted green button"
+                          onClick={() => {
+                            this.props.onChangeTarget(idx)
+                          }}
+                        >
                           Chỉnh sửa
                         </button>
                       </td>
