@@ -4,7 +4,7 @@ export class Footer extends Component {
   render() {
     return (
       <div class="footer">
-        <div class="footer-bottom">UI-UX 02 team</div>
+        <div class="footer-bottom">UI-UX 02 team - 098-1234567 </div>
       </div>
     )
   }

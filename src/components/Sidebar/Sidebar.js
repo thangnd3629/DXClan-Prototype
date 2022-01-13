@@ -16,26 +16,33 @@ export class Sidebar extends Component {
       <li>
         <div className="divider">KPI cá nhân</div>
         <Link to="/kpi-personal/dashboard">
-          <i className="fas fa-qrcode"></i>Dashboard KPI cá nhân
+          <i class="fas fa-chart-bar"></i>Dashboard KPI cá nhân
         </Link>
         <Link to="/kpi-personal/create">
           <i className="fas fa-qrcode"></i>Khởi tạo KPI cá nhân
         </Link>
         <Link to="/kpi-personal/manager">
-          <i className="fas fa-qrcode"></i>Quản lý KPI cá nhân
+          <i class="fas fa-tasks"></i>Quản lý KPI cá nhân
         </Link>
         <div className="divider">KPI đơn vị</div>
         <Link to="/kpi-unit/dashboard">
-          <i className="fas fa-qrcode"></i>Dashboard KPI đơn vị
+          <i class="fas fa-chart-bar"></i>Dashboard KPI đơn vị
         </Link>
         <Link to="/kpi-unit/create">
           <i className="fas fa-qrcode"></i>Khởi tạo KPI đơn vị
         </Link>
         <Link to="/kpi-unit/manager">
-          <i className="fas fa-qrcode"></i>Quản lý KPI đơn vị
+          <i class="fas fa-tasks"></i>Quản lý KPI đơn vị
         </Link>
         <Link to="/kpi-member/manager">
-          <i className="fas fa-qrcode"></i>Đánh giá KPI nhân viên
+          <i class="fas fa-eye"></i>Đánh giá KPI nhân viên
+        </Link>
+        <div className="divider"></div>
+        <Link to="/help">
+          <i class="far fa-question-circle"></i> Trợ giúp
+        </Link>
+        <Link to="#">
+          <i class="far fa-address-card"></i> Về Chúng tôi
         </Link>
       </li>,
     ]

@@ -20,6 +20,7 @@ import PersonalDashboard from "./containers/kpi-member/PersonalDashboard/Persona
 import UnitManager from "./containers/kpi-unit/UnitManager/UnitManager"
 import UnitDashboard from "./containers/kpi-unit/UnitDashboard/UnitDashboard"
 import Assesment from "./containers/kpi-unit/Assesment/Assesment"
+import Help from "./containers/help-page/Help"
 
 class App extends Component {
   render() {
@@ -62,6 +63,7 @@ class App extends Component {
               exact
               component={Assesment}
             ></Route>
+            <Route path="/help" exact component={Help}></Route>
           </Switch>
         </Layout>
       </Router>
