@@ -27,6 +27,8 @@ export default function Help() {
 
   return (
     <div className="help-container">
+      <h1>Hướng dẫn sử dụng module Quản lý KPI</h1>
+      <hr></hr>
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}

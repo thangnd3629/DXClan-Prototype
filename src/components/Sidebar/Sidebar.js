@@ -41,7 +41,7 @@ export class Sidebar extends Component {
         <Link to="/help">
           <i class="far fa-question-circle"></i> Trợ giúp
         </Link>
-        <Link to="#">
+        <Link to="/about">
           <i class="far fa-address-card"></i> Về Chúng tôi
         </Link>
         <Link to="/feedback">
