@@ -1,13 +1,14 @@
-import PersonalKPICreator from "./containers/kpi-member/PersonalKPICreator/PersonalKPICreator";
-import UnitKPICreator from "./containers/kpi-unit/UnitKPICreator/UnitKPICreator";
-import PersonalManager from "./containers/kpi-member/PersonalManager/PersonalManager";
-import PersonalDashboard from "./containers/kpi-member/PersonalDashboard/PersonalDashboard";
-import UnitManager from "./containers/kpi-unit/UnitManager/UnitManager";
-import UnitDashboard from "./containers/kpi-unit/UnitDashboard/UnitDashboard";
-import Assesment from "./containers/kpi-unit/Assesment/Assesment";
-import Help from "./containers/help-page/Help";
-import Feedback from "./components/Feedback/Feedback";
-import About from "./components/About/About";
+import PersonalKPICreator from "./containers/kpi-member/PersonalKPICreator/PersonalKPICreator"
+import UnitKPICreator from "./containers/kpi-unit/UnitKPICreator/UnitKPICreator"
+import PersonalManager from "./containers/kpi-member/PersonalManager/PersonalManager"
+import PersonalDashboard from "./containers/kpi-member/PersonalDashboard/PersonalDashboard"
+import UnitManager from "./containers/kpi-unit/UnitManager/UnitManager"
+import UnitDashboard from "./containers/kpi-unit/UnitDashboard/UnitDashboard"
+import Assesment from "./containers/kpi-unit/Assesment/Assesment"
+import Help from "./containers/help-page/Help"
+import Feedback from "./components/Feedback/Feedback"
+import About from "./components/About/About"
+import Home from "./components/Home/Home"
 
 const routes = [
   {
@@ -71,6 +72,12 @@ const routes = [
     Component: About,
     icon: "far fa-address-card",
   },
-];
+  {
+    path: "/",
+    name: "Trang chủ",
+    Component: Home,
+    icon: "fas fa-qrcode",
+  },
+]
 
-export default routes;
+export default routes
