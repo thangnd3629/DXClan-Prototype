@@ -9,16 +9,16 @@
         "Trọng số": 5
       },
       {
-        "Tên mục tiêu": "Phê duyệt công việc",
-        "Mục tiêu cha": "Phê duyệt công việc",
-        "Tiêu chí đánh giá": "Thực hiện tốt vai trò người phê duyệt trong các công việc. Người phê duyệt là người chịu trách nhiệm về thành công/thất bại của công việc",
-        "Trọng số": 5
+        "Tên mục tiêu": "Nấu 100 bát cơm",
+        "Mục tiêu cha": "Hỗ trợ tạp vụ",
+        "Tiêu chí đánh giá": "Nhân viên đánh giá 5* >50% số bữa",
+        "Trọng số": 10
       },
       {
-        "Tên mục tiêu": "Phê duyệt công việc",
-        "Mục tiêu cha": "Phê duyệt công việc",
-        "Tiêu chí đánh giá": "Thực hiện tốt vai trò người phê duyệt trong các công việc. Người phê duyệt là người chịu trách nhiệm về thành công/thất bại của công việc",
-        "Trọng số": 5
+        "Tên mục tiêu": "Dọn 100 nhà vệ sinh",
+        "Mục tiêu cha": "Hỗ trợ tạp vụ",
+        "Tiêu chí đánh giá": "Nhân viên đánh giá 5* >50% số lần sử dụng",
+        "Trọng số": 20
       },
       {
         "Tên mục tiêu": "Phê duyệt công việc",
