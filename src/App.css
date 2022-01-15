@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: sans-serif;
   margin: 0px;
   padding: 0px;
   font-size: 16px;
@@ -23,4 +23,8 @@ body,
 
 body {
   background-color: #f8f8f8;
+}
+
+.app__container {
+  padding: 0 100px;
 }

@@ -129,7 +129,7 @@ export default function UnitDashboard() {
   }, [time]);
 
   return (
-    <div style={{ height: "80vh", overflowY: "scroll" }}>
+    <div style={{ height: "80vh", overflowY: "hidden" }}>
       <div className='unit__dashboard__container'>
         <h2>Dashboard KPI đơn vị</h2>
         <div className='search__container my-5'>
