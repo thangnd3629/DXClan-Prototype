@@ -110,7 +110,7 @@ export default function UnitKPICreator() {
             <div class="ui input">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Ví dụ : Nấu 100 bát cơm"
                 onChange={onChangeKpiTarget}
                 value={kpiTarget}
               />
@@ -124,7 +124,7 @@ export default function UnitKPICreator() {
             <div class="ui input">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Ví dụ :Cơm được đánh giá 5* trên 50% số bữa"
                 value={kpiCriteria}
                 onChange={onChangeCriteria}
               />
@@ -138,7 +138,7 @@ export default function UnitKPICreator() {
               <input
                 type="text"
                 value={kpiBase}
-                placeholder="Search..."
+                placeholder="Ví dụ : Thực hiện công việc tạp vụ"
                 onChange={onChangeBaseKpi}
               />
             </div>
@@ -154,7 +154,7 @@ export default function UnitKPICreator() {
             <div class="ui input">
               <input
                 type="number"
-                placeholder="Search..."
+                placeholder="Ví dụ : 50"
                 onChange={onChangeKpiWeight}
                 value={kpiWeight}
               />

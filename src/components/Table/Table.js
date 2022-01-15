@@ -82,9 +82,13 @@ export class Table extends Component {
     return (
       <div className="custom-table">
         <div className="">
-          <div className="searchfield">
-            <input required onChange={this.queryHandler}></input>
-            <label>Search</label>
+          <div class="ui icon input searchfield">
+            <input
+              type="text"
+              placeholder="Tên mục tiêu ví dụ : Phê duyệt công việc"
+              onChange={this.queryHandler}
+            />
+            <i class="circular search link icon"></i>
           </div>
 
           <div className="checkboxes">
