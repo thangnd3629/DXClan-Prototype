@@ -21,6 +21,7 @@ import UnitManager from "./containers/kpi-unit/UnitManager/UnitManager"
 import UnitDashboard from "./containers/kpi-unit/UnitDashboard/UnitDashboard"
 import Assesment from "./containers/kpi-unit/Assesment/Assesment"
 import Help from "./containers/help-page/Help"
+import Feedback from "./components/Feedback/Feedback"
 
 class App extends Component {
   render() {
@@ -64,6 +65,7 @@ class App extends Component {
               component={Assesment}
             ></Route>
             <Route path="/help" exact component={Help}></Route>
+            <Route path="/feedback" exact component={Feedback}></Route>
           </Switch>
         </Layout>
       </Router>

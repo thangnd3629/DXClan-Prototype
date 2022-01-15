@@ -44,6 +44,9 @@ export class Sidebar extends Component {
         <Link to="#">
           <i class="far fa-address-card"></i> Về Chúng tôi
         </Link>
+        <Link to="/feedback">
+          <i class="far fa-address-card"></i> Phản hồi
+        </Link>
       </li>,
     ]
 
