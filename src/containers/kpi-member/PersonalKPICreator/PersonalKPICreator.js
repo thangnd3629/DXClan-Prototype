@@ -31,8 +31,6 @@ export default function UnitKPICreator() {
 
   useEffect(() => {
     const data = MOCK_DATA.filter((elm) => {
-      console.log(parseInt(elm["month"]));
-      console.log(parseInt(startDate.getMonth()), "get date");
       return parseInt(elm["month"]) === parseInt(startDate.getMonth() + 1);
     });
 
@@ -85,6 +83,10 @@ export default function UnitKPICreator() {
       </GeneralModal>
 
       <div className='mb-5'>
+        <div className='mb-4'>
+          <h2>Khởi tạo KPI cá nhân</h2>
+        </div>
+
         <div>
           <LocalizationProvider dateAdapter={AdapterDateFns}>
             <DatePicker

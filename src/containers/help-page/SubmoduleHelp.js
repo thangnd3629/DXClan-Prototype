@@ -1,15 +1,15 @@
-import React, { useState } from "react"
-import Accordion from "@mui/material/Accordion"
-import AccordionDetails from "@mui/material/AccordionDetails"
-import AccordionSummary from "@mui/material/AccordionSummary"
-import Typography from "@mui/material/Typography"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-import { Link } from "react-router-dom"
-export default function SubmoduleHelp({ modules }) {
-  const [expanded, setExpanded] = useState(false)
+import React, { useState } from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Link } from "react-router-dom";
+export default function SubmoduleHelp({ modules, handleShowGuide }) {
+  const [expanded, setExpanded] = useState(false);
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false)
-  }
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
     <>
@@ -20,8 +20,8 @@ export default function SubmoduleHelp({ modules }) {
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
+            aria-controls='panel1bh-content'
+            id='panel1bh-header'
           >
             <Typography sx={{ width: "33%", flexShrink: 0 }}>
               {submodule.name}
@@ -29,11 +29,13 @@ export default function SubmoduleHelp({ modules }) {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <Link to="#">{submodule.instruction}</Link>
+              <Link onClick={() => handleShowGuide(submodule.pdf)}>
+                {submodule.instruction}
+              </Link>
             </Typography>
           </AccordionDetails>
         </Accordion>
       ))}
     </>
-  )
+  );
 }
