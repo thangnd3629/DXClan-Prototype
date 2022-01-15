@@ -82,7 +82,7 @@
   margin: auto auto;
   padding-top: 50px;
   list-style: none;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .custom-table .hiddenCB input[type="checkbox"],

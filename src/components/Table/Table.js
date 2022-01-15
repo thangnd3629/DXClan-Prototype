@@ -55,6 +55,7 @@ export class Table extends Component {
   }
   render() {
     const columns = this.props.data[0] && Object.keys(this.props.data[0])
+    console.log(columns, "-------------------")
     const indexOfLastPost = this.state.currentPage * this.props.rowPerPage
     const indexOfFirstPost = indexOfLastPost - this.props.rowPerPage
     const data = this.filterData(this.props.data)
@@ -129,17 +130,15 @@ export class Table extends Component {
         <table>
           <thead>
             <tr>
-              {data[0]
-                ? columns.map((elm, idx) => {
-                    if (
-                      this.props.hidden_field &&
-                      this.props.hidden_field.includes(elm)
-                    ) {
-                      return null
-                    }
-                    return <th key={idx}>{elm}</th>
-                  })
-                : null}
+              {columns.map((elm, idx) => {
+                if (
+                  this.props.hidden_field &&
+                  this.props.hidden_field.includes(elm)
+                ) {
+                  return null
+                }
+                return <th key={idx}>{elm}</th>
+              })}
               <th>Hành động</th>
             </tr>
           </thead>
@@ -209,7 +208,6 @@ export class Table extends Component {
                   )
                 })
               : null}
-            {padding_row}
           </tbody>
         </table>
         <Pagination
