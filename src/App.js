@@ -24,7 +24,6 @@ class App extends Component {
               <Route
                 path={path}
                 render={(props) => {
-                  console.log("rendering");
                   const crumbs = routes
                     .filter(({ path }) => props.match.path.includes(path))
                     .map(({ path, ...rest }) => ({
@@ -40,8 +39,6 @@ class App extends Component {
                         : path,
                       ...rest,
                     }));
-                  console.log(`Generated crumbs for ${props.match.path}`);
-                  crumbs.map(({ name, path }) => console.log({ name, path }));
                   return (
                     <div className='app__container'>
                       <Breadcrumb crumbs={crumbs} />
