@@ -1,5 +1,5 @@
 ## Dependencies 
-NodeJS 14.x
+NodeJS 14+
 ## Installation
 - Install Node: https://nodejs.org/en/download/
 - Add Node to environment variable
