@@ -1,6 +1,7 @@
 .unit__dashboard__container {
   padding-top: 3rem;
   /* margin: auto 10rem; */
+  padding-bottom: 3rem;
 }
 
 .search__container {

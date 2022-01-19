@@ -2,7 +2,10 @@ import React from "react"
 import "./Feedback.css"
 import { Dropdown } from "semantic-ui-react"
 import { ToastContainer, toast } from "react-toastify"
+import { useLocation } from "react-router"
 export default function Feedback() {
+  const location = useLocation()
+
   const module = [
     {
       key: 1,
@@ -58,7 +61,17 @@ export default function Feedback() {
             class="form-control"
             id="exampleFormControlTextarea1"
             rows="3"
+            placeholder="Mô tả chi tiết vấn đề bạn đang gặp phải"
           ></textarea>
+        </div>
+        <div class="form-group">
+          <div for="exampleFormControlTextarea1">Hình ảnh minh họa</div>
+          <div className="box">
+            <img
+              class="ui fluid image"
+              src={location.state ? location.state.state.img : null}
+            />
+          </div>
         </div>
         <button
           type="submit"
