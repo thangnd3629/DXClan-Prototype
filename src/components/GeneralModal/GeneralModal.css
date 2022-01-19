@@ -1,12 +1,13 @@
 .modal-wrapper {
   z-index: 10000000;
   background: #fff;
-  width: 80%;
+
   position: absolute;
-  max-width: 800px;
+  min-width: 800px;
+  max-width: 1000px;
   margin: 2rem auto;
   transition: all 0.5s ease;
-  top: 30%;
+  top: 50%;
   left: 50%;
   border-radius: 15px;
 }
